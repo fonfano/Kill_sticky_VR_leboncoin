@@ -10,7 +10,7 @@
 
 
 // Historique
-// 29-07-2023   0.1   creation :  Kill dirty header when scrolling
+// 29-07-2023   0.1   creation :  Kill dirty sticky header when scrolling
 
 
 
