@@ -19,6 +19,5 @@ function kill()  {
   let toKill = document.querySelector("#mainContent > div:nth-child(2) > div:nth-child(2) > div.src__CenteredWrapper-sc-1bgl6we-0.jvloxK > section > div.styles_DashboardHeader__0YNrp > div._3IX1b._2VRRU > div");
   if (toKill) {
     toKill.style.display = "none";
-    console.log("dothejob");
   }
 }
