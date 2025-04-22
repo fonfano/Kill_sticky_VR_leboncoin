@@ -3,13 +3,14 @@
 // @namespace   github.com/fonfano
 // @match       https://www.leboncoin.fr/compte/part/mes-annonces
 // @grant       none
-// @version     0.2.4
+// @version     0.2.5
 // @author      Lt Ripley
 // @description Kills dirty header when scrolling
 // ==/UserScript==
 
 
 // Historique
+// 27-12-2023   0.2.5 update   :  For new header
 // 07-10-2023   0.2.4 update   :  For new header
 // 27-08-2023   0.2.3 update   :  Removed boolean (isRemoved) to allow better working
 // 03-08-2023   0.2.2 update   :  Added boolean to minimize costs (isRemoved)
@@ -28,8 +29,8 @@ window.addEventListener("load", (event) => {  // Censé attendre que la page soi
     window.addEventListener('scroll', function() {kill()} );
 
     function kill()  {
-        //let toKill = document.querySelector("#mainContent > div:nth-child(2) > div:nth-child(2) > div.src__CenteredWrapper-sc-1bgl6we-0.jvloxK > section > div.styles_DashboardHeader__0YNrp > div._3IX1b._2VRRU > div");
-        let toKill = document.querySelector("#mainContent > div:nth-child(2) > div.flex.flex-col.items-center > section.w-full.max-w-page-max.px-lg > div.styles_DashboardHeader__0YNrp > div._3IX1b._2VRRU > div");
+
+      let toKill = document.querySelector('div[data-test-id="sticky-container"]');
 
         if (toKill) {
           toKill.remove();
